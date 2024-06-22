@@ -1,0 +1,20 @@
+
+
+name: Linux Build
+
+on: push
+
+jobs:
+  build:
+    name: Build on Ubuntu
+    runs-on: ubuntu-20.04
+    steps:
+    - name: Checkout Code
+      uses: actions/checkout@v4
+      with:
+        ref: 432977a0a4d7c5944fa8ec0f5483c205578e9aea
+
+    - name: Build C Code
+      run: |
+        meson setup build/ 
+        ninja -C build/
