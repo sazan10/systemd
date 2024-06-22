@@ -17,5 +17,6 @@ jobs:
     - name: Build C Code
       run: |
         sudo apt-get install meson
+        sudo apt-get install gperf
         meson setup build/ 
         ninja -C build/
