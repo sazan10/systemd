@@ -16,5 +16,6 @@ jobs:
 
     - name: Build C Code
       run: |
+        sudo apt-get install meson
         meson setup build/ 
         ninja -C build/
